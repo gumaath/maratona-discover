@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Guma Finanças</title>
 </head>
+
 <body>
   <header>
-  <h1>dev.finance$</h1>
-</header>
-<h2>Balanço</h2>
-<h3>Entradas</h3>
-<p>R$5.000,00</p>
-<h3>Saídas</h3>
-<p>R$2.000,00</p>
-<h3>Total</h3>
-<p>R$3.000,00</p>
+    <h1 id="logo">Guma Finanças</h1>
+  </header>
+  <section id="balance">
+    <h2>Balanço</h2>
+    <div class="card">
+      <h3>Entradas</h3>
+      <p>R$5.000,00</p>
+    </div>
+
+    <div class="card">
+      <h3>Saídas</h3>
+      <p>R$2.000,00</p>
+    </div>
+
+    <div class="card">
+      <h3>Total</h3>
+      <p>R$3.000,00</p>
+    </div>
+
+  </section>
+  <section id="transactions">
+    <h2>Transações</h2>
+
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>Descrição</th>
+          <th>Valor</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Luz</td>
+          <td>-R$500,00</td>
+          <td>21/01/2021</td>
+        </tr>
+
+        <tr>
+          <td>Criação website</td>
+          <td>R$5000,00</td>
+          <td>23/01/2021</td>
+        </tr>
+
+        <tr>
+          <td>Internet</td>
+          <td>-R$200,00</td>
+          <td>24/01/2021</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <footer>Feito com &hearts; por Gustavo Matheus &copy; 2020</footer>
 </body>
+
 </html>
