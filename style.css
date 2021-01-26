@@ -1,0 +1,120 @@
+/* ========== GLOBAL ============ */
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(231, 231, 231);
+  align-content: center;
+}
+/* ========== HEADER ============ */
+h1#logo {
+  color: white;
+  font-weight: lighter;
+}
+
+header {
+  background-color: rgb(16, 49, 16);
+  margin: -10px;
+  padding: 50px;
+  padding-bottom: 130px;
+  text-align: center;
+}
+/* ========== CARDS ============ */
+div.container {
+  margin: auto;
+  width: min(90vw, 800px);
+}
+
+section#balance {
+  margin: 20px;
+  margin-top: -120px;
+  padding: -10px;
+  color: white;
+}
+
+div.card {
+  margin-bottom: 30px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 1px 1px 1px 15px;
+  line-height: 20px;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(32, 32, 32);
+}
+
+div#total.card {
+  background-color: rgb(40, 134, 40);
+  color: white;
+}
+/* ========== TABLE ============ */
+
+h3 {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+p {
+  font-weight: normal;
+  font-size: 30px;
+}
+
+table#data-table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  padding: 0rem 2rem;
+  color: #969cb3;
+}
+
+table th {
+  background: white;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+table tr:hover {
+  opacity: 1;
+}
+
+table tbody tr {
+  opacity: 0.7;
+}
+
+table td {
+  background: white;
+  padding: 1rem 2rem;
+  color: #969cb3;
+}
+
+td.expense {
+  color: red;
+}
+
+td.income {
+  color: green;
+}
+
+td.description {
+  color: #363f5f;
+  font-weight: normal;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+/* ========== FOOTER ============ */
+footer {
+  margin-top: 10px;
+  text-align: center;
+  color: #8a8a8a;
+  padding: 2rem 0.8rem;
+}
