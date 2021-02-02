@@ -2,29 +2,45 @@
 * {
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 93.75%; /* 15 px */
 }
 
 body {
   background-color: rgb(231, 231, 231);
   align-content: center;
 }
+
+.sr-only {
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden; 
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+} 
 /* ========== HEADER ============ */
-h1#logo {
-  color: white;
-  font-weight: lighter;
+img#logo {
+ margin-bottom: 30px;
 }
 
 header {
   background-color: rgb(16, 49, 16);
-  margin: -10px;
-  padding: 50px;
+  padding: 60px;
   padding-bottom: 130px;
   text-align: center;
 }
 /* ========== CARDS ============ */
-div.container {
+main.container {
   margin: auto;
   width: min(90vw, 800px);
+  padding-top: 20px;
 }
 
 section#balance {
@@ -38,8 +54,8 @@ div.card {
   margin-bottom: 30px;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
-  padding: 1px 1px 1px 15px;
-  line-height: 20px;
+  padding: 20px;
+  line-height: 40px;
   font-size: 25px;
   font-weight: 700;
   color: rgb(32, 32, 32);
@@ -49,11 +65,63 @@ div#total.card {
   background-color: rgb(40, 134, 40);
   color: white;
 }
+
+/* ========== BUTTONS ============ */
+
+a {
+  color:rgb(71, 107, 36);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(91, 156, 26); 
+}
+
+#buttonnew {
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
+.button.cancel {
+  color: #e92929;
+  border: 2px #e92929 solid;
+  border-radius: 0.25rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s linear;
+  opacity: 0.7;
+}
+
+.button.cancel:hover {
+  background: #e92929;
+  color: white;
+  opacity: 1.0;
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: white;
+  background: rgb(91, 156, 26);
+  border-radius: 0.25rem;
+  padding: 0;
+  transition: all .1s linear;
+}
+
+button:hover {
+  background: rgb(111, 190, 31);
+}
 /* ========== TABLE ============ */
 
-h3 {
+div.card h3 {
   font-size: 15px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 p {
@@ -66,6 +134,12 @@ table#data-table {
   border-spacing: 0 0.5rem;
   padding: 0rem 2rem;
   color: #969cb3;
+}
+
+#transactions {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
 }
 
 table th {
@@ -111,10 +185,88 @@ table tbody tr td:last-child {
   border-radius: 0 0.25rem 0.25rem 0;
 }
 
+/* ========== MODAL ============ */
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  background: #F0F2f5;
+  padding: 2.4rem;
+  position: relative;
+
+}
+
+/* ========== FORM ============ */
+#form h2 {
+  margin-top: 0;
+}
+
+input {
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+
+.input-group {
+  margin-top: 0.8rem;
+}
+
+summary {
+  opacity: 0.4;
+  margin-top: 0.2rem;
+  color:rgb(71, 107, 36);
+}
+
+.input-group.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-group.actions .button, .input-group.actions button {
+  width: 48%;
+}
+
 /* ========== FOOTER ============ */
 footer {
   margin-top: 10px;
   text-align: center;
   color: #8a8a8a;
   padding: 2rem 0.8rem;
+}
+
+/* ========== RESPONSIVE ============ */
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 15px;
+  }
+
+}
+
+@media (min-width: 576px) {
+  #form {
+    min-width: 500px;
+  }
 }

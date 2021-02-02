@@ -14,61 +14,107 @@
 <body>
 
   <header>
-    <h1 id="logo">Guma Finanças</h1>
-  </header>  
-<div class="container">
-  <section id="balance">
-    <h2>Balanço</h2>
-    <div class="card">
-      <h3>Entradas</h3>
-      <p>R$ 5.000,00</p>
+    <img id="logo" src="./assets/logo.svg" alt="">
+  </header>
+
+  <main class="container">
+    <section id="balance">
+      <h2 class="sr-only">Balanço</h2>
+
+      <div class="card">
+        <h3>
+          <span>Entradas</span>
+          <img src="./assets/income.svg" alt="">
+        </h3>
+        <p>R$ 5.000,00</p>
+      </div>
+
+      <div class="card">
+        <h3>
+          <span>Saídas</span>
+          <img src="./assets/expense.svg" alt="">
+        </h3>
+        <p>R$ 2.000,00</p>
+      </div>
+
+      <div class="card" id="total">
+        <h3>
+          <span>Total</span>
+          <img src="./assets/total.svg" alt="">
+        </h3>
+        <p>R$ 3.000,00</p>
+      </div>
+
+    </section>
+    <section id="transactions">
+      <h2 class="sr-only">Transações</h2>
+
+      <a href="#" id="buttonnew" onclick="Modal.open()">+ Nova Transação</a>
+
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="description">Luz</td>
+            <td class="expense">-R$500,00</td>
+            <td class="date">21/01/2021</td>
+            <td><img src="./assets/minus.svg" alt=""></td>
+          </tr>
+
+          <tr>
+            <td class="description">Criação website</td>
+            <td class="income">R$5000,00</td>
+            <td class="date">23/01/2021</td>
+            <td><img src="./assets/minus.svg" alt=""></td>
+          </tr>
+
+          <tr>
+            <td class="description">Internet</td>
+            <td class="expense">-R$200,00</td>
+            <td class="date">24/01/2021</td>
+            <td><img src="./assets/minus.svg" alt=""></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <div class="modal-overlay">
+    <div class="modal">
+      <div id="form">
+        <h2>Nova Transação</h2>
+        <form action="">
+          <div class="input-group">
+            <label class="sr-only" for="descript">Descrição</label>
+            <input type="text" name="descript" id="descript" placeholder="Descrição" />
+          </div>
+          <div class="input-group">
+            <label class="sr-only" for="amount">Valor</label>
+            <input type="text" name="amount" id="amount" placeholder="0,00" />
+          </div>
+          <details>
+            <summary> Como colocar minhas despesas?</summary>
+            Use o sinal - (negativo) para despesas e , (vírgula) para casas decimais
+          </details>
+          <div class="input-group">
+            <label class="sr-only" for="date">Data</label>
+            <input type="date" name="date" id="date" />
+          </div>
+          <div class="input-group actions">
+            <a onclick="Modal.close()" href="#" class="button cancel">Cancelar</a>
+            <button type="submit">Salvar</button>
+          </div>
+        </form>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>Saídas</h3>
-      <p>R$ 2.000,00</p>
-    </div>
-
-    <div class="card" id="total">
-      <h3>Total</h3>
-      <p>R$ 3.000,00</p>
-    </div>
-
-  </section>
-  <section id="transactions">
-    <h2>Transações</h2>
-
-    <table id="data-table">
-      <thead>
-        <tr>
-          <th>Descrição</th>
-          <th>Valor</th>
-          <th>Data</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td class="description">Luz</td>
-          <td class="expense">-R$500,00</td>
-          <td class="date">21/01/2021</td>
-        </tr>
-
-        <tr>
-          <td class="description">Criação website</td>
-          <td class="income">R$5000,00</td>
-          <td class="date">23/01/2021</td>
-        </tr>
-
-        <tr>
-          <td class="description">Internet</td>
-          <td class="expense">-R$200,00</td>
-          <td class="date">24/01/2021</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-</div>
+  </div>
   <footer>Feito com &hearts; por Gustavo Matheus &copy; 2020</footer>
+  <script src="script.js"></script>
 </body>
-
-</html>
