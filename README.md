@@ -18,9 +18,10 @@ Fiz este repositório para colocar meu projeto desenvolvido durante a **[Maraton
 
 <h2 id="tecnologias">Tecnologias utilizadas 🚀</h2>
 Nesse projeto foi utilizado as seguintes tecnologias:
--   HTML
--   CSS
--   JavaScript
+
+- HTML
+- CSS
+- JavaScript
 
 ## :memo: Licença
 
