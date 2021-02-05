@@ -1,4 +1,4 @@
-const Dateformat = {
+const Datelimit = {
   updateDate() {
     n =  new Date();
     y = n.getFullYear();
@@ -20,9 +20,6 @@ const Dateformat = {
   }
   
 }
-
-Dateformat.updateDate()
-
 const Modal = {
   open() {
     document.querySelector(".modal-overlay").classList.add("active")
@@ -225,3 +222,4 @@ const App = {
 
 
 App.init()
+Datelimit.updateDate()
