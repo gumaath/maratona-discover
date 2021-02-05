@@ -14,7 +14,7 @@
 
 Fiz este repositório para colocar meu projeto desenvolvido durante a **[Maratona Discover](https://maratonadiscover.rocketseat.com.br/maratona/aula-01)** proporcionado pela **[Rocketseat](https://rocketseat.com.br/)**
 
-![peguei do repositório deles rs](https://raw.githubusercontent.com/rocketseat-education/maratona-discover-01/main/.github/devfinances.png)
+<a href="https://rocketseat.com.br" target="_blank">![peguei do repositório deles rs](https://raw.githubusercontent.com/rocketseat-education/maratona-discover-01/main/.github/devfinances.png)</a>
 
 <h2 id="tecnologias">Tecnologias utilizadas 🚀</h2>
 Nesse projeto foi utilizado as seguintes tecnologias:
