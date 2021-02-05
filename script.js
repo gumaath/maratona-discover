@@ -1,3 +1,28 @@
+const Dateformat = {
+  updateDate() {
+    n =  new Date();
+    y = n.getFullYear();
+    m = n.getMonth()
+    if (m < 9) {
+    m = "0" + (n.getMonth() + 1)
+    } else {
+    m = n.getMonth() + 1
+    }
+    d = n.getDate();
+    if (d < 9) {
+    d = "0" + n.getDate();
+    } else {
+    n.getDate()
+    }
+    let dateFormat = document.getElementById("date");
+    dateFormat.max = y + "-" + m + "-" + d;
+    return dateFormat.max
+  }
+  
+}
+
+Dateformat.updateDate()
+
 const Modal = {
   open() {
     document.querySelector(".modal-overlay").classList.add("active")
@@ -178,8 +203,9 @@ const Utils = {
   formatDate(date) {
     const splittedDate = date.split("-")
     return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
-  }
+  },
 }
+
 
 const App = {
   init() {
@@ -196,5 +222,6 @@ const App = {
     App.init()
   },
 }
+
 
 App.init()
