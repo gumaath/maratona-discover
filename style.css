@@ -1,3 +1,10 @@
+/* ========== COLORS ============ */
+:root {
+  --whitebg: #e7e7e7;
+  --lightpurple: #BF67E9;
+  --purple: #8911C1;
+}
+
 /* ========== GLOBAL ============ */
 * {
   font-family: 'Poppins', sans-serif;
@@ -10,7 +17,7 @@ html {
 }
 
 body {
-  background-color: rgb(231, 231, 231);
+  background-color: var(--whitebg);
   align-content: center;
 }
 
@@ -31,7 +38,7 @@ img#logo {
 }
 
 header {
-  background-color: rgb(16, 49, 16);
+  background-color: var(--lightpurple);
   padding: 60px;
   padding-bottom: 130px;
   text-align: center;
@@ -52,29 +59,44 @@ section#balance {
 
 div.card {
   margin-bottom: 30px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   border-radius: 5px;
   padding: 20px;
   line-height: 40px;
-  font-size: 25px;
   font-weight: 700;
+  font-size: 30px;
   color: rgb(32, 32, 32);
+  transition: all 0.1s ease-in-out;
 }
 
+div.card:hover {
+  background-color: #f5f5f5;
+  padding: 25px;
+  font-size: 35px;
+  transition: all 0.2s ease-in-out;
+  cursor: default; 
+  }
+
 div#total.card {
-  background-color: rgb(40, 134, 40);
+  background-color: var(--purple);
   color: white;
+  
+}
+
+div#total.card:hover {
+  background-color: #7811a8;
+  transition: all 0.1s ease-in-out;
 }
 
 /* ========== BUTTONS ============ */
 
 a {
-  color:rgb(71, 107, 36);
+  color: var(--purple);
   text-decoration: none;
 }
 
 a:hover {
-  color: rgb(91, 156, 26); 
+  color: #a916ee; 
 }
 
 #buttonnew {
@@ -105,29 +127,25 @@ button {
   height: 50px;
   border: none;
   color: white;
-  background: rgb(91, 156, 26);
+  background: var(--purple);
   border-radius: 0.25rem;
   padding: 0;
   transition: all .1s linear;
 }
 
 button:hover {
-  background: rgb(111, 190, 31);
+  background: #a916ee;
 }
 /* ========== TABLE ============ */
 
 div.card h3 {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-p {
-  font-weight: normal;
-  font-size: 30px;
-}
 
 table#data-table {
   width: 100%;
@@ -202,6 +220,7 @@ table tbody tr td:last-child {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  transition: all 0.2s ease-in-out;
 }
 
 .modal {
@@ -230,7 +249,7 @@ input {
 summary {
   opacity: 0.4;
   margin-top: 0.2rem;
-  color:rgb(71, 107, 36);
+  color: #a916ee;
 }
 
 .input-group.actions {
@@ -249,6 +268,17 @@ footer {
   text-align: center;
   color: #8a8a8a;
   padding: 2rem 0.8rem;
+}
+
+#socialmediafooter {
+  opacity: 0.2;
+  margin: 0.4rem 0.2rem;
+  transition: all 0.1s ease-in-out;
+}
+
+#socialmediafooter:hover {
+  opacity: 0.4;
+  margin: 0.4rem 0.2rem;
 }
 
 /* ========== RESPONSIVE ============ */
