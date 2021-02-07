@@ -3,8 +3,28 @@
   --whitebg: #e7e7e7;
   --lightpurple: #BF67E9;
   --purple: #8911C1;
+  --summary-text: #a916ee;
+  --total-hover: #7811a8;
+  --white: #ffffff;
+  --card-hover: #f5f5f5;
+  --placeholder: #7c7d7e;
+  --td-description: #969cb3;
+  --text-hover: #000000;
 }
 
+[data-theme="dark"] {
+  --whitebg: #2b2b2b;
+  --lightpurple: #442353;
+  --purple: #3e1452;
+  --summary-text: #a916ee;
+  --buttonhover: #9516cf;
+  --total-hover: #210a2c;
+  --white: #474747;
+  --placeholder: #0f0f0f;
+  --card-hover: #969696;
+  --td-description: #cdcecf;
+  --text-hover: #969696;
+}
 /* ========== GLOBAL ============ */
 * {
   font-family: 'Poppins', sans-serif;
@@ -59,7 +79,7 @@ section#balance {
 
 div.card {
   margin-bottom: 30px;
-  background-color: #ffffff;
+  background-color: var(--white);
   border-radius: 5px;
   padding: 20px;
   line-height: 40px;
@@ -70,7 +90,7 @@ div.card {
 }
 
 div.card:hover {
-  background-color: #f5f5f5;
+  background-color: var(--card-hover);
   padding: 25px;
   font-size: 35px;
   transition: all 0.2s ease-in-out;
@@ -84,19 +104,19 @@ div#total.card {
 }
 
 div#total.card:hover {
-  background-color: #7811a8;
+  background-color: var(--total-hover);
   transition: all 0.1s ease-in-out;
 }
 
 /* ========== BUTTONS ============ */
 
 a {
-  color: var(--purple);
+  color: var(--summary-text);
   text-decoration: none;
 }
 
 a:hover {
-  color: #a916ee; 
+  color: var(--buttonhover); 
 }
 
 #buttonnew {
@@ -134,7 +154,7 @@ button {
 }
 
 button:hover {
-  background: #a916ee;
+  background: var(--summary-text);
 }
 /* ========== TABLE ============ */
 
@@ -161,7 +181,7 @@ table#data-table {
 }
 
 table th {
-  background: white;
+  background: var(--white);
   padding: 1rem 2rem;
   text-align: left;
 }
@@ -175,9 +195,9 @@ table tbody tr {
 }
 
 table td {
-  background: white;
+  background: var(--white);
   padding: 1rem 2rem;
-  color: #969cb3;
+  color: var(--td-description);
 }
 
 td.expense {
@@ -189,7 +209,7 @@ td.income {
 }
 
 td.description {
-  color: #363f5f;
+  color: var(--td-description);
   font-weight: normal;
 }
 
@@ -221,10 +241,11 @@ table tbody tr td:last-child {
   opacity: 0;
   visibility: hidden;
   transition: all 0.2s ease-in-out;
+  z-index: 1;
 }
 
 .modal {
-  background: #F0F2f5;
+  background: var(--whitebg);
   padding: 2.4rem;
   position: relative;
 
@@ -233,6 +254,7 @@ table tbody tr td:last-child {
 /* ========== FORM ============ */
 #form h2 {
   margin-top: 0;
+  color: var(--text-hover)
 }
 
 input {
@@ -244,18 +266,26 @@ input {
 
 .input-group {
   margin-top: 0.8rem;
+  color: var(--card-hover);
+  opacity: 1;
+}
+
+div.input-group ::placeholder {
+  color: var(--placeholder);
+  opacity: 0.4;
 }
 
 summary {
-  opacity: 0.4;
+  opacity: 0.6;
   margin-top: 0.2rem;
-  color: #a916ee;
+  color: var(--summary-text);
 }
 
 .input-group.actions {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  opacity: 1;
 }
 
 .input-group.actions .button, .input-group.actions button {
@@ -263,7 +293,8 @@ summary {
 }
 
 /* ========== FOOTER ============ */
-footer {
+footer {  
+  display: block;
   margin-top: 10px;
   text-align: center;
   color: #8a8a8a;
@@ -274,6 +305,7 @@ footer {
   opacity: 0.2;
   margin: 0.4rem 0.2rem;
   transition: all 0.1s ease-in-out;
+  z-index: 0;
 }
 
 #socialmediafooter:hover {
@@ -293,10 +325,81 @@ footer {
     grid-column-gap: 15px;
   }
 
+  div#switch {
+    position: fixed;
+    width: 3200px;
+    bottom: 790px;
+    justify-content: space-between;
+  }
+
 }
 
 @media (min-width: 576px) {
   #form {
     min-width: 500px;
   }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: absolute;
+  right: 20px;
+  top: 32.5px;
+  width: 40px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--purple);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--purple);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
