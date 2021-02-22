@@ -12,7 +12,7 @@
 
 <div align="center"><strong>Seja bem-vindo ao meu repositório! :)</strong></div>
 
-<div align="center">Repositório criado para commitar o projeto feito durante a ** [edição#04 da NLW](https://nextlevelweek.com/episodios/react/1/edicao/4) ** proporcionado pela **[Rocketseat](https://rocketseat.com.br/) **</div>
+<div align="center">Repositório criado para commitar o projeto feito durante a [edição#04 da NLW](https://nextlevelweek.com/episodios/react/1/edicao/4) proporcionado pela **[Rocketseat](https://rocketseat.com.br/) **</div>
 
 <h2 id="tecnologias">Tecnologias utilizadas 🚀</h2>
 Nesse projeto foi utilizado as seguintes tecnologias:
