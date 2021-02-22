@@ -1,7 +1,7 @@
 
 <h1 align="center">
      <a href="https://rocketseat.com.br" target="_blank"> 
-       <img alt="Maratona Discover" title="#MaratonaDiscover" src="https://svgshare.com/i/Tno.svg" width="350px" />
+       <img alt="Maratona Discover" title="Nlw Edição 4" src="https://svgshare.com/i/UG_.svg" width="350px" />
     </a>
   </h1>
   
@@ -12,9 +12,7 @@
 
 <div align="center"><strong>Seja bem-vindo ao meu repositório! :)</strong></div>
 
-Fiz este repositório para colocar meu projeto desenvolvido durante a **[Maratona Discover](https://maratonadiscover.rocketseat.com.br/maratona/aula-01)** proporcionado pela **[Rocketseat](https://rocketseat.com.br/)**
-
-<a href="https://rocketseat.com.br" target="_blank">![peguei do repositório deles rs](https://raw.githubusercontent.com/rocketseat-education/maratona-discover-01/main/.github/devfinances.png)</a>
+Repositório criado para commitar o projeto feito durante a **[edição#04 da NLW](https://nextlevelweek.com/episodios/react/1/edicao/4)** proporcionado pela **[Rocketseat](https://rocketseat.com.br/)**
 
 <h2 id="tecnologias">Tecnologias utilizadas 🚀</h2>
 Nesse projeto foi utilizado as seguintes tecnologias:
@@ -22,6 +20,8 @@ Nesse projeto foi utilizado as seguintes tecnologias:
 - HTML
 - CSS
 - JavaScript
+- TypeScript
+- React
 
 ## :memo: Licença
 
